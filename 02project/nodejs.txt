@@ -1,0 +1,41 @@
+NodeJS คือ 
+- Platform ที่เขียนด้วย Javascript สำหรับฝั่ง server
+- Cross Platform ด้วย คือ สามารถทำงานได้บนระบบปฏิบัติการ windows,linux,unix,mac os และ อื่น ๆ
+- Opensource
+
+หลักการที่สำคัญของ NodeJS
+- Asynchronous คือ การทำงานที่ไม่รอซึ่งกันและกันคำสั่งไหนทำเสร็จก่อนก็ทำคำสั่งนั้นก่อน มีส่วนที่เรียกว่า callback โดย callback นั้นเป็น function ที่จะทำงานเมื่อ asynchronous function ที่งานเสร็จ โดย asynchronous functionใดทำเสร็จก่อนก็จะทำการ callback ของ asynchronous function นั้นๆเลย 
+
+- Synchronous คือ การทำแบบเป็นลำดับขั้นตอน (ตรงข้ามกับ asynchronous)
+
+Express
+- เป็น Web application framework บน node.js มี features ที่ช่วยให้เราทำเว็บได้สะดวกขึ้น เช่น กรทำ rounting , middleware การจัดการ request และ response เป็นต้น ทำให้สามารถสร้างเว็บโดยใช้ Node.js ได้สะดวกรวดเร็วยิ่งขึ้น
+
+Feature หลักของ Express
+- Middleware ช่วยให้การร้องขอไปยังหลาย handlers เป็นลำดับ
+- Routing จัดการกับการร้องขอสำหรับแต่ละ URL กับแต่ละ HTTP Method
+- Methods And Properties เพิ่ม Methods ของวัตถุ request และ response 
+- View สำหรับ dynamically rendering HTML
+
+ExpressJS Routing
+- เส้นทาง (Routing) เป็นการกำหนดการอ้างอิงว่า Application จะตอบสนองต่อ Request ของ Client ที่มายั
+ปลายทางได้อย่างไร โดยกำหนด URL (หรือ Path) และวิธีการร้องขอ HTTP (GET,POST,และอื่น ๆ)
+        app.METHOD(PATH,HANDLER)
+app.METHOD() เป็นฟังก์ชันสำหรับทำ Rounting โดย METHOD เป็น HTTP request method เช่น
+    - Method GET ใช้ app.get()
+    - Method Post ใช้ app.post()
+PATH เป็นเส้นทางบน server
+HANDLER เป็น function ที่จะทำงานเมื่อ path ใน url ตรงกับ path ที่กำหนด
+
+
+Request Object And Response Object
+
+- Request Object เป็น Object ที่ได้มาจาก parameter ตัวแรกของ callback มี property และ method เพิ่มเติมจาก callback ของ HTTP
+
+- Response Object เป็น Object ที่ได้มาจาก parameter ตัวที่สองของ callback มี property และ method เพิ่มเติมจาก callback ของ HTTP
+
+View 
+- view ใน Express เป็นตัวกำหนดการแสดงผลหน้าเว็บไซต์ว่าจะใช้ HTML engine อันไหนซึ่ง HTML engine เป็นเหมือนตัวช่วยในการเขียน html เช่น Jade,EJS, Handlebars,Pug เป็นต้น
+
+ExpressJS Generator
+- เป็นเครื่องมือที่ช่วยในการสร้างโครงสร้างโปรเจคสำหรับ express ได้อย่างง่าย และเริ่มต้นได้รวดเร็วพร้อมกำหนด Route และ View ให้โดยอัติโนมัติ

@@ -1,0 +1,22 @@
+ติดตั้ง Express Generator
+- npm install -g express-generator
+
+สร้าง project
+- express --view=ejs ตามด้วยชื่อโปรเจค
+
+การติดตั้งเพิ่มเติม (*** myBlog คือ ชื่อโปรเจค)
+change directory:
+    > cd myBlog
+
+install dependencies:
+    > npm install
+
+run the app:
+    > SET DEBUG=myblog:* & npm start
+
+
+ติดตั้ง mongodb
+- npm install mongodb
+
+ติดตั้ง libary สำหรับติดต่อฐานข้อมูล MongoDB
+- npm install mongoose

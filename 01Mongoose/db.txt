@@ -1,0 +1,6 @@
+Mongoose 
+- NoSQL
+ODM = Object Ducument Mapping
+
+-SQL
+ORM = Object Relational Mapping
