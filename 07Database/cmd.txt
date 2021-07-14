@@ -1,0 +1,2 @@
+คำสั่ง run mongodb
+- mongod
