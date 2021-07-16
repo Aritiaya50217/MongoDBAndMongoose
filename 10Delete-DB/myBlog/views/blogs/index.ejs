@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <!-- นำ layout.ejs มาแสดง ใช้ ../ เพราะใช้ไฟล์นอก -->
+    <%- include('../layout') %>
+    <div class="mt-3">
+        <a href="/blogs/add" class="btn btn-primary">เขียนบทความ</a>
+        <h1><%= data %></h1>
+        <p>by Artitaya</p>
+        <!-- นำข้อมูลใน ฐานข้อมูลมาแสดง 
+        <p>ข้อมูลใน Database :&nbsp;<%= blogs %></p>
+        -->
+        <div class="container " style="border: blue solid; border-radius: 15px;">
+            <!-- ใช้ forEach วนลูปข้อมูล -->
+            <% Object.values(blogs).forEach(function(blog){%>
+                <h5><b>ชื่อบทความ </b>: <%= blog.title %></h5>
+                <p><b>ผู้เขียน </b>: <%= blog.author %></p>
+                <p><b>หมวดหมู่</b> : <%= blog.category %></p>
+                <a href="">แก้ไข</a>
+                <!-- blog._id คือ การเข้าถึง id ที่อยู่ในฐานข้อมูล โดย blog คือชื่อ collection ส่วน _id คือ ค่าไอดีที่ฐานข้อมูลกำหนด -->
+                <a href="/blogs/delete/<%= blog._id %>" onclick="return confirm('ต้องการลบหรือไม่')">ลบ</a>
+                <hr>
+            <% }) %>
+        </div>
+    </div>
+    
+</body>
+</html>

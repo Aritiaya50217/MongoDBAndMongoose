@@ -1,0 +1,4 @@
+ติดตั้ง express validater ในการตรวจสอบการกรอกข้อมูล
+- npm install express-validator
+
+link : https://kongruksiamza.medium.com/nodejs-validate-data-and-alert-message-in-ejs-template-engine-f2844a4cb255
